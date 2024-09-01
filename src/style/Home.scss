@@ -1,0 +1,137 @@
+/* Base styles for .Carousel */
+.Carousel {
+  height: 400px;
+}
+
+.Carousel-item {
+  height: 390px;
+  background: linear-gradient(70deg, rgb(87, 6, 158), black, black, black);
+  margin-left: 5%;
+  margin-right: 5%;
+  border-radius: 4px;
+}
+
+.img {
+  width: 100%;
+  opacity: 0.3;
+  border-radius: 4px;
+  margin-top: -150px;
+}
+
+.img2 {
+  height: 300px;
+  width: 230px;
+  float: left;
+  border-radius: 3px;
+  margin-right: 40px;
+  margin-left: -50px;
+}
+
+.vote {
+  display: flex;
+  font-size: large;
+  gap: 10px;
+}
+
+.Caption {
+  height: 350px;
+  width: auto;
+  text-align: start;
+}
+
+.icon1 {
+  font-size: 30px;
+  color: gold;
+}
+
+.icon {
+  color: rgb(121, 7, 251);
+  margin-right: 4px;
+  margin-bottom: 5px;
+}
+
+.Tittle {
+  color: rgb(244, 244, 118);
+}
+
+.description {
+  font-size: small;
+  text-align: justify;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 968px) {
+  /* Tablet and smaller */
+  .Carousel {
+    height: 280px;
+  }
+
+  .Carousel-item {
+    height: 240px;
+  }
+
+  .Caption {
+    font-size: 10px;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    height: 230px;
+  }
+
+  .Tittle {
+    font-size: 16px;
+  }
+
+  .vote {
+    display: none;
+  }
+
+  .img2 {
+    height: 190px;
+    width: auto;
+    margin-left: 50px;
+  }
+
+  .description {
+    font-size: smaller;
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Mobile */
+  .Carousel {
+    height: 200px;
+  }
+
+  .Carousel-item {
+    height: 180px;
+  }
+
+  .Caption {
+    font-size: 10px;
+    bottom: 10px;
+    margin-left: -15px;
+    right: 10px;
+    height: 170px;
+  }
+
+  .Tittle {
+    font-size: 14px;
+  }
+
+  .vote {
+    display: none;
+  }
+
+  .img2 {
+    height: 130px;
+    width: auto;
+    margin-left: 50px;
+  }
+
+  .description {
+    font-size: 7px;
+    width: 90%;
+  }
+}

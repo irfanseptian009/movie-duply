@@ -1,0 +1,82 @@
+.all-pages {
+  background: linear-gradient(
+    80deg,
+    black,
+    rgb(36, 36, 99),
+    black,
+    black,
+    rgb(3, 3, 79),
+    black
+  );
+}
+
+Button {
+  border-radius: 4px;
+  color: rgb(166, 202, 202);
+  margin-left: -23px;
+}
+
+.button-secondary {
+  padding: 2px;
+  margin-right: 4px;
+  border-radius: 3px;
+  height: 30px;
+  width: 70px;
+}
+
+.button-warning {
+  padding: 2px;
+  margin-left: 1px;
+  border-radius: 3px;
+  height: 30px;
+  width: 70px;
+  color: rgb(255, 255, 255);
+}
+
+/* Media Queries for Tablet and Mobile */
+@media (max-width: 768px) {
+  .button-secondary {
+    width: 40px;
+    height: 15px;
+    font-size: 6px;
+    margin-top: -20px;
+  }
+  .button-warning {
+    width: 40px;
+    height: 15px;
+    font-size: 6px;
+    margin-top: -20px;
+  }
+  Button {
+    font-size: 14px;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Mobile */
+  .button-secondary {
+    width: 40px;
+    height: 15px;
+    font-size: 6px;
+    margin-top: -20px;
+  }
+  .button-warning {
+    width: 40px;
+    height: 15px;
+    font-size: 6px;
+    margin-top: -20px;
+  }
+  Button {
+    font-size: 14px;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+}

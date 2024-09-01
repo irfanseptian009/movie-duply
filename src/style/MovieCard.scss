@@ -1,0 +1,58 @@
+.toggle {
+  margin: 20px;
+  margin-top: -1px;
+  padding: px;
+}
+
+.up-and-down {
+  color: rgb(81, 105, 223);
+}
+
+.card-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.card-body {
+  background-color: transparent;
+  font-size: 11px;
+
+  font-weight: 600;
+  color: white;
+}
+
+.cards {
+  border-radius: 5px;
+  margin: 15px;
+  background: transparent;
+  backdrop-filter: blur(50px);
+  background: rgba(68, 0, 255, 0.16);
+  padding: 20px;
+  border-radius: 7px;
+}
+.card {
+  background: transparent;
+  height: auto;
+}
+
+img {
+  border-radius: 5px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 15px;
+}
+
+.form {
+  display: flex;
+}
+.search {
+  background: transparent;
+  border: 2px rgb(68, 68, 142) solid;
+}
+
+.button1 {
+  margin-left: 10px;
+}

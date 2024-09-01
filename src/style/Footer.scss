@@ -1,0 +1,65 @@
+/* Base styles for .footer */
+.footer {
+  background-color: #200053; /* Dark background */
+  color: #fff; /* White text */
+  padding: 20px 0;
+  text-align: center;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-direction: column;
+  }
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  /* Styling for Links */
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      display: inline;
+      margin-right: 20px;
+    }
+
+    a {
+      color: #90918e;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  /* Styling for Social Media Icons */
+  .social-media {
+    a {
+      margin: 0 10px; /* Add spacing between icons */
+    }
+
+    svg {
+      /* Style FontAwesome icons */
+      font-size: 20px;
+    }
+  }
+
+  /* Copyright Styling */
+  .copyright p {
+    font-size: 0.9em;
+    margin-top: 10px;
+  }
+
+  /* Responsive Design for Smaller Screens */
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+    }
+  }
+}

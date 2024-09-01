@@ -1,0 +1,23 @@
+.body {
+  background: linear-gradient(
+    80deg,
+    black,
+    rgb(40, 15, 103),
+    rgb(56, 53, 130),
+    rgb(61, 20, 143),
+    rgb(20, 20, 110),
+    rgb(91, 59, 220)
+  );
+}
+
+.brand {
+  color: rgb(58, 136, 205);
+  font-weight: 600;
+  //   margin-right: 65%;
+  //   margin-left: 10px;
+}
+
+span {
+  color: rgb(75, 31, 252);
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
