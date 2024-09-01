@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "../style/Detail.scss";
 import { BsFire, BsFillCalendarMonthFill } from "react-icons/bs";
@@ -13,7 +13,9 @@ export default function Detail() {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          `https://api.themoviedb.org/3/movie/${id}?language=en-US&api_key=e519c026fd0b9d3561e2320c4bb3bb90`
+          `https://api.themoviedb.org/3/movie/${id}?language=en-US&api_key=${
+            import.meta.env.VITE_API_KEY
+          }`
         );
         const responseJson = await response.json();
         setData(responseJson);

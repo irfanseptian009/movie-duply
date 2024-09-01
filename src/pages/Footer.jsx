@@ -1,4 +1,3 @@
-import React from "react";
 import "../style/Footer.scss"; // Import your SCSS file for styling
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faTwitter, faInstagram } from "@fortawesome/free-brands-svg-icons"; // You'll need to install and configure FontAwesome

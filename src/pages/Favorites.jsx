@@ -1,14 +1,10 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 import "../style/Favorite.scss";
 import { BsFire } from "react-icons/bs";
 import { MdFindInPage } from "react-icons/md";
-
-export const apiKey = "133defa4ac839757296610c1217e7aee";
-export const baseUrl = "https://api.themoviedb.org/3";
-export const imgUrl = "https://image.tmdb.org/t/p/w500";
 
 function Favorite() {
   const [favoriteMovies, setFavoriteMovies] = useState([]);
@@ -22,11 +18,14 @@ function Favorite() {
           const favoriteIds = JSON.parse(localStorage.getItem("favorite"));
           const favoriteMoviesData = await Promise.all(
             favoriteIds.map(async (id) => {
-              const response = await axios.get(`${baseUrl}/movie/${id}`, {
-                params: {
-                  api_key: apiKey,
-                },
-              });
+              const response = await axios.get(
+                `${import.meta.env.VITE_BASE_URL}/movie/${id}`,
+                {
+                  params: {
+                    api_key: import.meta.env.VITE_API_KEY,
+                  },
+                }
+              );
               return response.data;
             })
           );
@@ -40,7 +39,7 @@ function Favorite() {
     };
 
     fetchFavoriteMovies();
-  }, []);
+  }, [isLoading, error]);
 
   const removeFromFavorites = (id) => {
     const updatedFavorites = favoriteMovies.filter((movie) => movie.id !== id);
@@ -65,7 +64,6 @@ function Favorite() {
             <div className="cards-fav" key={movie.id}>
               <div className="card-fav">
                 <img
-                  variant="top"
                   src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
                   alt={movie.title}
                 />

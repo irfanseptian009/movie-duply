@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Container, Row, Col, Form, Button } from "react-bootstrap";
+import { useState } from "react";
+import { Col, Form, Button } from "react-bootstrap";
 import axios from "axios";
 import MovieCard from "./MovieCard";
 import { useContext } from "react";
@@ -23,7 +23,9 @@ const SearchBar = () => {
     setError(null);
     try {
       const response = await axios.get(
-        `https://api.themoviedb.org/3/search/movie?query=${query}&include_adult=false&language=en-US&page=1&api_key=e519c026fd0b9d3561e2320c4bb3bb90`
+        `https://api.themoviedb.org/3/search/movie?query=${query}&include_adult=false&language=en-US&page=1&api_key=${
+          import.meta.env.VITE_API_KEY
+        }`
       );
       setDataMovie(response.data);
     } catch (error) {
@@ -35,6 +37,7 @@ const SearchBar = () => {
   const PINK = "rgb(132, 101, 255)";
   const BLUE = " rgb(9, 94, 169)";
 
+  // eslint-disable-next-line react/prop-types
   function ContextAwareToggle({ children, eventKey, callback }) {
     const { activeEventKey } = useContext(AccordionContext);
 

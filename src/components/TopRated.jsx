@@ -1,12 +1,9 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 import "../style/ListMovie.scss";
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 import swal from "sweetalert";
-export const apiKey = "133defa4ac839757296610c1217e7aee";
-export const baseUrl = "https://api.themoviedb.org/3";
-export const imgUrl = "https://image.tmdb.org/t/p/w500";
 
 function TopRated() {
   const [movies, setMovies] = useState([]);
@@ -17,11 +14,14 @@ function TopRated() {
     const fetchMovies = async () => {
       setIsLoading(true);
       try {
-        const response = await axios.get(`${baseUrl}/movie/top_rated`, {
-          params: {
-            api_key: apiKey,
-          },
-        });
+        const response = await axios.get(
+          `${import.meta.env.VITE_BASE_URL}/movie/top_rated`,
+          {
+            params: {
+              api_key: import.meta.env.VITE_API_KEY,
+            },
+          }
+        );
         setMovies(response.data.results);
         setIsLoading(false);
       } catch (error) {
@@ -32,7 +32,7 @@ function TopRated() {
     };
 
     fetchMovies();
-  }, []);
+  }, [isLoading, error]);
 
   function handleFavorite(id) {
     if (localStorage.getItem("favorite")) {
@@ -64,7 +64,7 @@ function TopRated() {
           {movies.map((movie) => (
             <div key={movie?.id} className="movie-card">
               <img
-                src={`${imgUrl}${movie.poster_path}`}
+                src={`${import.meta.env.VITE_BASE_IMG_URL}${movie.poster_path}`}
                 alt={movie.title}
                 className="movie-image"
               />

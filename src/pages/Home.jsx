@@ -14,10 +14,6 @@ import { FaLanguage } from "react-icons/fa";
 import { MdFavoriteBorder, MdHowToVote } from "react-icons/md";
 import { BsCalendar2Date, BsFire } from "react-icons/bs";
 
-export const apiKey = "133defa4ac839757296610c1217e7aee";
-export const baseUrl = "https://api.themoviedb.org/3";
-export const imgUrl = "https://image.tmdb.org/t/p/w500";
-
 function Home() {
   const [movies, setMovies] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -27,11 +23,14 @@ function Home() {
     const fetchMovies = async () => {
       setIsLoading(true);
       try {
-        const response = await axios.get(`${baseUrl}/movie/now_playing`, {
-          params: {
-            api_key: apiKey,
-          },
-        });
+        const response = await axios.get(
+          `${import.meta.env.VITE_BASE_URL}/movie/now_playing`,
+          {
+            params: {
+              api_key: import.meta.env.VITE_API_KEY,
+            },
+          }
+        );
         setMovies(response.data.results);
         setIsLoading(false);
       } catch (error) {
@@ -85,14 +84,14 @@ function Home() {
             <div className="Carousel-item">
               <img
                 className="img"
-                src={`${imgUrl}${movie.poster_path}`}
+                src={`${import.meta.env.VITE_BASE_IMG_URL}${movie.poster_path}`}
                 alt={movie.title}
               />
 
               <Carousel.Caption className="Caption">
                 <img
                   className="img2"
-                  src={`${imgUrl}${movie.poster_path}`}
+                  src={`${import.meta.env.VITE_BASE_IMG_URL}${movie.poster_path}`}
                   alt={movie.title}
                 />
                 <h2 className="Tittle">{movie.title}</h2>

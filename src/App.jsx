@@ -1,8 +1,6 @@
 import Header from "./pages/Header.jsx";
 import Home from "./pages/Home.jsx";
-import Popular from "./components/ListMovie.jsx";
 import "./App.scss";
-import SearchBar from "./components/SearchBar";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Favorites from "./pages/Favorites";
 import Detail from "./pages/Detail";
