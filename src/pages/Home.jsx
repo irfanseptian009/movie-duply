@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 import Carousel from "react-bootstrap/Carousel";
 import "../style/Home.scss";
+import swal from "sweetalert";
 import { LiaImdb } from "react-icons/lia";
 import ListMovie from "./../components/ListMovie";
 import Upcoming from "./../components/Upcoming";
@@ -17,7 +18,7 @@ export const apiKey = "133defa4ac839757296610c1217e7aee";
 export const baseUrl = "https://api.themoviedb.org/3";
 export const imgUrl = "https://image.tmdb.org/t/p/w500";
 
-function Home(id) {
+function Home() {
   const [movies, setMovies] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
