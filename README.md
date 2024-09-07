@@ -9,6 +9,7 @@ Currently, two official plugins are available:
 
 - 
 
-![Screenshot_20240907_185336](https://github.com/user-attachments/assets/45fb2606-0683-44de-aea8-0b2068a6eccb)
+![Screenshot_20240907_185245](https://github.com/user-attachments/assets/cb3cf19f-1fac-48b8-8d7f-118f408c27b4)
+
 ![Screenshot_20240907_185336](https://github.com/user-attachments/assets/f995de61-00dd-43bd-94a1-c50a7a082738)
 ![Screenshot_20240907_185351](https://github.com/user-attachments/assets/bc15d76c-5790-432a-bd77-6f9d13c53204)
